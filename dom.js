@@ -170,3 +170,10 @@ document.body.append(newHeading);
 let x = document.querySelector("h2");
 x.before(newHeading); // it will insert the newHeading before the h2 element
 //x.after(newHeading); // it will insert the newHeading after the h2 element
+
+//after method
+let newHeading2 = document.createElement("h2");
+newHeading2.innerText = "i am another new heading";
+document.body.append(newHeading2);
+let y = document.querySelector("h2");
+y.after(newHeading2); // it will insert the newHeading2 after the h2 element
