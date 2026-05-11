@@ -118,3 +118,14 @@ h1element4.insertAdjacentElement("beforeend", newdiv6); // beforeend will insert
 // insert before h1 using afterbegin
 let newdiv7 = document.createElement("div");
 newdiv7.innerText = "i was inserted before h1 using afterbegin";
+
+
+
+
+
+
+// lets Learn append()
+// prepend()
+// before()
+// after()
+// insertBefore()
