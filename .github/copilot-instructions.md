@@ -1,28 +1,45 @@
 # Project Guidelines
 
+## Project Focus
+- This is a small educational DOM manipulation project.
+- Primary HTML entry point: `Index.html`.
+- Main JavaScript examples and exercises live in `dom.js`.
+- `EVENTS.js` is currently an unused stub file for event-related practice.
+
 ## Code Style
-- Use plain vanilla JavaScript for DOM manipulation without frameworks
-- Comments include explanations of why certain approaches are chosen (e.g., `+=` for appending vs `=` for replacing)
-- Bilingual comments (English + Punjabi) for educational purposes
+- Use plain vanilla JavaScript only; do not introduce frameworks or build tools.
+- Keep code simple and readable for learners.
+- Prefer comments that explain *why* a statement is used, not just *what* it does.
+- Preserve the existing bilingual style when helpful: English plus Punjabi.
 
-## Architecture
-- Simple educational project with HTML structure and JavaScript exercises
-- No build tools or dependencies; direct browser execution
-- Key files: [Index.html](Index.html) for structure, [dom.js](dom.js) for DOM manipulation examples
+## DOM Conventions
+- Use `querySelector()` for one element and `querySelectorAll()` for multiple elements.
+- Access `NodeList` results by index: `divs[0]`, `divs[1]`, `divs[2]`.
+- Create elements with `document.createElement()`.
+- Set properties (`innerText`, `className`, etc.) before inserting.
+- Insert elements with `append()`, `prepend()`, `before()`, `after()`, or `insertAdjacentElement()`.
+- Use insertion position values carefully: `beforebegin`, `afterbegin`, `beforeend`, `afterend`.
 
-## Build and Test
-- No build commands required; open [Index.html](Index.html) in browser to test
-- Manual testing by refreshing the page after code changes
-- For local server (optional): `python -m http.server` in project root
+## File / Task Guidance
+- `Index.html` contains the page structure and loads `dom.js`.
+- Avoid changing the page structure dramatically; keep exercises small and focused.
+- Check whether new JavaScript is actually loaded by `Index.html` before assuming it runs.
+- Use `EVENTS.js` only if you also update `Index.html` to include it.
 
-## Conventions
-- Use `querySelector()` for single elements, `querySelectorAll()` for multiple (returns NodeList)
-- Access NodeList elements with bracket notation: `divs[0]`, `divs[1]`
-- Element creation: `createElement()` → set properties → `append()` or `insertAdjacentElement()`
-- Position strings for insertion: `beforebegin`, `afterbegin`, `beforeend`, `afterend`
-- ID selectors: `#myheading`, class selectors: `.box`
+## Testing
+- No build step is required.
+- Open `Index.html` directly in a browser and refresh after changes.
+- Optionally run a local static server from the project root:
+  - `python -m http.server`
 
-## Potential Pitfalls
-- `querySelector('.box')` selects only the first match; use `querySelectorAll()` for all
-- Multiple `h1` elements exist; selectors may pick the first one
-- Confusing `insertAdjacentElement` positions; test in browser
+## Common Pitfalls
+- `querySelector('.box')` returns only the first matching element.
+- `querySelectorAll('.box')` returns a `NodeList`, not an array.
+- `insertAdjacentElement()` position strings are easy to mix up; verify placement in browser.
+- Multiple `h1` elements are present; generic selectors may select the first one unexpectedly.
+- `append()` moves an existing node if reused, so create a new element for each insertion.
+
+## Agent Notes
+- Keep responses focused on DOM/basic JavaScript exercises.
+- Do not add package managers, frameworks, or tooling beyond the static browser workflow.
+- When suggesting code, keep it compatible with the existing HTML structure and simple enough for learners.
