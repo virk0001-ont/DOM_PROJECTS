@@ -29,10 +29,92 @@ divs[2].innerText = "working excellent";
 //ques 3 
 // create a div element and add some text to it and append it to the body of the document
 
+//// Step 1: Create a div
+// let newDiv = document.createElement("div");
+
+// // Step 2: Add text inside div
+// newDiv.innerText = "Hello! I am a new div";
+
+// // Step 3: Append div to body
+// document.body.append(newDiv);
+
+let newdiv = document.createElement("div");
+newdiv.innerText = "i was appened using js";
+document.body.append(newdiv);
+
 
 //ques4 
 // create a div element and add some text to it and insert it before the h1 element in the body of the document
 
+let newdiv2 = document.createElement("div");
+newdiv2.innerText = "i was inserted before h1 using js";
 
-//ques5 
+let h1 = document.querySelector("h1");
+document.body.insertBefore(newdiv2, h1);
+// we can use beforebegin and
 // create a div element and add some text to it and insert it after the h1 element in the body of the document
+let newdiv3 = document.createElement("div");
+newdiv3.innerText = "i was inserted after h1 using js";
+
+let h1element = document.querySelector("h1");
+h1element.insertAdjacentElement("afterend", newdiv3); // afterend will insert the newdiv3 after the h1 element
+
+//insert before vs adjacent elemetn
+// insert before will insert the new element before the reference element and
+//  adjacent element will insert the new element at the specified position relative to the reference element (beforebegin, afterbegin, beforeend, afterend)
+
+
+
+
+
+
+
+
+
+//beforebegin - goes before the element
+// afterbegin -goes inside the element right after the opening tag
+// beforeend -goes inside the element right before the closing tag
+// afterend- goes after the element
+
+//solving questions using 
+
+
+
+// (beforebegin, afterbegin, beforeend, afterend)
+
+
+
+
+
+// insert before h1 using beforebegin
+let newdiv4 = document.createElement("div");
+newdiv4.innerText = "i was inserted before h1 using beforebegin";
+
+let h1element2 = document.querySelector("h1");
+h1element2.insertAdjacentElement("beforebegin", newdiv4); // beforebegin will insert the newdiv4 before the h1 element
+//beforeend will insert the new element as the last child of the reference element
+//
+// insert after h1 using afterend
+
+
+
+
+
+
+let newdiv5 = document.createElement("div");
+newdiv5.innerText = "i was inserted after h1 using afterend";
+
+let h1element3 = document.querySelector("h1");
+h1element3.insertAdjacentElement("afterend", newdiv5); // afterend will insert the newdiv5 after the h1 element 
+
+
+// insert after h1 using beforeend
+let newdiv6 = document.createElement("div");
+newdiv6.innerText = "i was inserted after h1 using beforeend";
+
+let h1element4 = document.querySelector("h1");
+h1element4.insertAdjacentElement("beforeend", newdiv6); // beforeend will insert the newdiv6 as the last child of the h1 element
+
+// insert before h1 using afterbegin
+let newdiv7 = document.createElement("div");
+newdiv7.innerText = "i was inserted before h1 using afterbegin";
