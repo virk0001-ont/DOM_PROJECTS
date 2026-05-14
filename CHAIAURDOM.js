@@ -88,5 +88,38 @@ document.body.appendChild(newchild);
 //enough for styling in javascript, we will learn more about styling in css later on.
 
 //adding input with type password
+
+let a = document.querySelector(".inputfield");
+// console.log(a);
+// console.dir(a)
     
 
+//selecting []specific h1s in html and styling them
+
+const styleh1 = document.querySelectorAll("h1");
+styleh1[0].style.color = 'green'
+//hune jiwe ehde ch 0,1,2 bharke appa alag alag h1 
+//nu style kr skde a 
+// styling all
+const styleh12 = document.querySelectorAll("h1");
+
+styleh12.forEach((h1) => {
+    h1.style.color = "green";
+});
+
+document.querySelector("ul")
+document.querySelector("ol")
+
+
+document.querySelectorAll(".moosa")
+//ehde nal node list aa jani all 3 <li> elements
+
+Array.from(tempClassList)
+
+//lets learn . children ,parent child 
+//first element child and last element child
+//some example to learn difference between query selector all vs queryslecetor
+
+//finding parent elements using child nodes.
+///how to find sibling elements
+//what is document.createtextnode
